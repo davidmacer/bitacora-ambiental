@@ -1,3 +1,5 @@
+
+
 body,
 html {
     width: 100%;
@@ -12,38 +14,65 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    font-family: "Sans","Sans",sans-serif,sans-serif,sans-serif;
     font-weight: 700;
 }
 
+/* barra superior lado izquierdo */
 .topnav {
-    font-size: 18px;
-    border-bottom: 0.5px outset rgb(255, 255, 255);
-    background: rgba(151, 54, 54, 0.9);
-    box-shadow: 0px 0px rgb(255, 255, 255);
+    font-size: 15px;
+    /*border-bottom: 0.5px outset rgb(255, 255, 255);*/
+    background: #406A5C;
+    box-shadow: 0px 0px #406A5C;
 }
+
+/* barra superior lado derecho */
 .topnav ul.navbar-nav li a {
-background: rgba(28, 28, 28, 0.1);
-color: #000;
+background: #406A5C;
+color: #ffffff;
+height: 73px;
 }
+
+/* color de fondo de botones (hover) barra superior lado derecho */
 .topnav ul.navbar-nav li a:hover,
 .topnav ul.navbar-nav li a:focus
  {
-background: rgba(255, 255, 255, 0.5);
+background: #406A5C;
 color: #000;
 }
+
+
 
 /* Fondo y letra de la barra de navegación superior */
 .topnav .navbar-brand {
   background: rgba(28, 28, 28, 0.0);
   color: rgb(255, 255, 255);
+  
 }
 
+/* color de fondo de botones (hover) barra superior lado izquierdo */
 .topnav .navbar-brand:hover,
 .topnav .navbar-brand:focus {
-  background: rgba(255, 255, 255, 0.5);
+  background: #406A5C;
   color: #000;
 }
+
+/* logopuebla en barra superior */
+.logopuebla {
+position:absolute;
+height: auto;
+left: 0px;
+width: 130px;
+}
+
+/* logosmadsot en barra superior */
+.logoSMADSOT {
+  position:fixed;
+  height: auto;
+  left: 130px;
+  width: 130px;
+  } 
 
 .lead {
     font-size: 18px;
@@ -63,6 +92,7 @@ color: #000;
   height: 855px;
 }
 
+/*Seccion Bitacora ambiental mas botones*/
 .intro-message {
     position: relative;
     padding-top: 20%;
@@ -139,12 +169,12 @@ hr.intro-divider {
   letter-spacing: 2px;
 }
 
-/*section 2*/
+/*Seccion Que es OE y Que es bitacora ambiental*/
 .content-section-a {
-    padding: 50px 0;
-    background: url('https://live.staticflickr.com/7249/13529527514_b35c3f0f75_k.jpg') no-repeat center center fixed;
+    padding: 50px 50;
+    background: white;
     background-size: cover;
-    height: 855px;
+    /*margin: 50px 25px;*/
 }
 .bg-overlay2 {
   margin-top: -50px;
@@ -174,35 +204,39 @@ hr.intro-divider {
   font-size: 22.5px;
 }
 
+/*Titulo Que es OE*/
+.content-section-a p
 h2.section-heading {
-    margin-top: 100px;
+    margin-top: 20px;
     font-size: 3em;
     color: rgba(0, 0, 0, 0.9);
 }
 
-  /*text*/
+  /*texto parrafo Que es Ordenamiento Ecologico y Que es bitacora ambiental*/
  .content-section-a p {
-    font-size: 22px;
-   font-weight: bold;
+    font-size: 18px;
+    font-weight: lighter;
     color: #000;
+    margin-bottom: 0%;
+    
   }
 .content-section-a p a {
-  color: silver;
+  color: rgb(255, 255, 255);
   font-weight: bold;
 }
-/*profile picture*/
+/*profile picture
 .img-circle {
   margin-top: 150px;
   border: 1px outset rgba(193, 127, 127, 0.3);
   box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
   
-}
+}*/
 
 
-/* Portfolio section*/
+/* seccion consulta mas informacion*/
 section {
   color: black;
-  background: url('https://68.media.tumblr.com/d3fd545cd977a174beef12c1106880bf/tumblr_nt505iKkul1ud7rr3o1_1280.jpg') no-repeat center center fixed;
+  background: white;
   background-size: cover;
 }
 
@@ -247,7 +281,7 @@ section {
 
 #portfolio .portfolio-item:hover {
   transition: 0.5s;
-  box-shadow: 5px 10px 5px rgba(0,0,0,0.9);
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.9);
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -323,6 +357,13 @@ section {
   }
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 /*.col-md-4 {
   overflow: hidden;
   display: inline-block;
@@ -345,19 +386,15 @@ section {
     border-top: 3px solid #e7e7e7;
 }
 
+/* Recuadro Paginas Asociadas*/
 .banner {
-    padding: 100px 0;
-    background: url('https://68.media.tumblr.com/ac46aa24b44b5036e9200abb71f810d9/tumblr_nt5vzxV6Us1ud7rr3o1_1280.jpg') no-repeat center center fixed;
+    padding: -50px 0;
+    background: rgb(255, 255, 255);
     background-size: cover;
-    height: 755px;
+    height: 200px;
 }
 
-.bg-overlay4 {
-  margin-top: -100px;
-  padding: 100px 0;
-  background: rgba(255,255,255, 0.3);
-  height: 755px;
-}
+
 
 .banner ul {
     margin-bottom: 0;
@@ -381,12 +418,14 @@ section {
         display: block;
         margin-bottom: 20px;
         padding: 0;
+        
     }
 
     ul.banner-social-buttons > li:last-child {
         margin-bottom: 0;
     }
 
+/* Color titulo Paginas asociadas */
 h2.connect {
    margin: 0;
    color: rgba(0, 0, 0, 0.9);
@@ -394,11 +433,15 @@ h2.connect {
 
 footer {
     padding: 50px 0;
-    background: rgba(192, 192, 192, 0.9);
+    background:#406A5C;
+    
 }
 
 p.copyright {
     margin: 15px 0 0;
+    color:rgba(255, 255, 255, 0.9);
+    font-size: medium;
+    font-weight: lighter;
 }
 
 /* Dropdown Button */
