@@ -7,15 +7,22 @@ html {
     
 }
 
+@font-face {
+  font-family: 'adelle-sans-light';
+  src: url('../js/adelle-sans-light-maisfontes.74a5/adelle-sans-light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-
-    font-family: "Sans","Sans",sans-serif,sans-serif,sans-serif;
+h6,
+p {
+    font-family: "adelle-sans-light";
     font-weight: 700;
 }
 
