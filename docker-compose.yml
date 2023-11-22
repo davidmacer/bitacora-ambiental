@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    image: nginx:latest
+    container_name: cont-bitacora
+    restart: always
+    volumes:
+      - ./app/:/usr/share/nginx/html/
+    ports:
+      - "8080:80"
