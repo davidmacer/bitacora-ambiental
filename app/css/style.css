@@ -94,7 +94,7 @@ width: 130px;
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
-    background: url('https://live.staticflickr.com/8655/16276291858_6e2ffe1e4b_k.jpg') no-repeat center center fixed;
+    background: url('../multimedia/portada_bitacora.png') no-repeat center center fixed;
     background-size: cover;
     height: 855px;
 }
