@@ -1,10 +1,8 @@
-
-
 body,
 html {
-    width: 100%;
-    height: 100%;
-    
+  width: 100%;
+  height: 100%;
+
 }
 
 @font-face {
@@ -22,8 +20,8 @@ h4,
 h5,
 h6,
 p {
-    font-family: "adelle-sans-light";
-    font-weight: 700;
+  font-family: "adelle-sans-light";
+  font-weight: 700;
 }
 
 p {
@@ -32,25 +30,24 @@ p {
 
 /* barra superior lado izquierdo */
 .topnav {
-    font-size: 15px;
-    /*border-bottom: 0.5px outset rgb(255, 255, 255);*/
-    background: #406A5C;
-    box-shadow: 0px 0px #406A5C;
+  font-size: 15px;
+  /*border-bottom: 0.5px outset rgb(255, 255, 255);*/
+  background: #406A5C;
+  box-shadow: 0px 0px #406A5C;
 }
 
 /* barra superior lado derecho */
 .topnav ul.navbar-nav li a {
-background: #406A5C;
-color: #ffffff;
-height: 73px;
+  background: #406A5C;
+  color: #ffffff;
+  height: 73px;
 }
 
 /* color de fondo de botones (hover) barra superior lado derecho */
 .topnav ul.navbar-nav li a:hover,
-.topnav ul.navbar-nav li a:focus
- {
-background: #406A5C;
-color: #000;
+.topnav ul.navbar-nav li a:focus {
+  background: #406A5C;
+  color: #000;
 }
 
 
@@ -59,7 +56,7 @@ color: #000;
 .topnav .navbar-brand {
   background: rgba(28, 28, 28, 0.0);
   color: rgb(255, 255, 255);
-  
+
 }
 
 /* color de fondo de botones (hover) barra superior lado izquierdo */
@@ -71,170 +68,182 @@ color: #000;
 
 /* logopuebla en barra superior */
 .logopuebla {
-position:absolute;
-height: auto;
-left: 0px;
-width: 130px;
+  position: absolute;
+  height: auto;
+  left: 0px;
+  width: 130px;
 }
 
 /* logosmadsot en barra superior */
 .logoSMADSOT {
-  position:fixed;
+  position: fixed;
   height: auto;
   left: 130px;
   width: 130px;
-  } 
+}
 
 .lead {
-    font-size: 18px;
-    font-weight: 400;
+  font-size: 18px;
+  font-weight: 400;
 }
+
 /*top background*/
-.intro-header { 
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
-    text-align: center;
-    background: url('../multimedia/portada_bitacora.png') no-repeat center center fixed;
-    background-size: cover;
-    height: 855px;
+.intro-header {
+  padding-top: 50px;
+  /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom: 50px;
+  text-align: center;
+  background: url('../multimedia/portada_bitacora.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 855px;
 }
+
 .bg-overlay {
-  background:rgba(0,0,0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
   height: 855px;
 }
 
 /*Seccion Bitacora ambiental mas botones*/
 .intro-message {
-    position: relative;
-    padding-top: 20%;
-    padding-bottom: 20%;
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 20%;
 }
+
 /*Big header*/
-.intro-message > h1 {
-    margin-top: -50px;
-    text-shadow: 2px 1px 2px #000;
-    font-size: 5em;
-    color: rgb(255, 255, 255);
+.intro-message>h1 {
+  margin-top: -50px;
+  text-shadow: 2px 1px 2px #000;
+  font-size: 5em;
+  color: rgb(255, 255, 255);
 }
 
 .intro-divider {
-    width: 400px;
-    border-top: 1px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
+
 /*small header*/
-.intro-message > h3 {
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+.intro-message>h3 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   color: rgb(255, 255, 255);
 }
 
 @media(max-width:767px) {
-    .intro-message {
-        padding-bottom: 15%;
-    }
+  .intro-message {
+    padding-bottom: 15%;
+  }
 
-    .intro-message > h1 {
-        font-size: 3em;
-    }
+  .intro-message>h1 {
+    font-size: 3em;
+  }
 
-    ul.intro-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
+  ul.intro-social-buttons>li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
 
-    ul.intro-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
+  ul.intro-social-buttons>li:last-child {
+    margin-bottom: 0;
+  }
 
-    .intro-divider {
-        width: 100%;
-    }
+  .intro-divider {
+    width: 100%;
+  }
 }
+
 /*line*/
 hr.intro-divider {
   border: 1px outset rgba(255, 255, 255, 0.2);
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   width: 100%;
 }
+
 /* social buttons */
 .btn {
   display: inline-block;
   color: #000;
   border: 2px outset rgba(0, 0, 0, 0.9);
   background: #C0C0C0;
-  text-shadow: 1px 1px 1px rgba(0,0,0, 20);
-  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 20);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
   transition: 0.2s;
 }
 
 .btn:hover {
-	color: #fff;
+  color: #fff;
   border: 2px outset rgba(0, 0, 0, 0.9);
-  background: rgba(0,0,0, 0.9);
-  transform:scale(1.1);
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
   transition: 0.2s;
-  text-shadow: 1px 1px 1px rgba(0,0,0, 20);
-  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 20);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
 }
 
 /*Seccion Que es OE y Que es bitacora ambiental*/
 .content-section-a {
-    padding: 50px 50;
-    background: white;
-    background-size: cover;
-    /*margin: 50px 25px;*/
+  padding: 50px 50;
+  background: white;
+  background-size: cover;
+  /*margin: 50px 25px;*/
 }
+
 .bg-overlay2 {
   margin-top: -50px;
   background: rgba(255, 255, 255, 0.2);
   height: 855px;
 }
-  /*self-taught*/
+
+/*self-taught*/
 .container .link {
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 22px;
 }
+
 .container .link-footer {
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 32px;
 }
+
 .container .link-footer:hover {
-  color:rgba(24,39,40, 0.8);
+  color: rgba(24, 39, 40, 0.8);
   font-weight: bold;
   font-size: 32px;
 }
 
 .container .link:hover {
-  color: rgb(0,0,128);
+  color: rgb(0, 0, 128);
   font-weight: bold;
   font-size: 22.5px;
 }
 
 /*Titulo Que es OE*/
-.content-section-a p
-h2.section-heading {
-    margin-top: 20px;
-    font-size: 3em;
-    color: rgba(0, 0, 0, 0.9);
+.content-section-a p h2.section-heading {
+  margin-top: 20px;
+  font-size: 3em;
+  color: rgba(0, 0, 0, 0.9);
 }
 
-  /*texto parrafo Que es Ordenamiento Ecologico y Que es bitacora ambiental*/
- .content-section-a p {
-    font-size: 18px;
-    font-weight: lighter;
-    color: #000;
-    margin-bottom: 0%;
-    
-  }
+/*texto parrafo Que es Ordenamiento Ecologico y Que es bitacora ambiental*/
+.content-section-a p {
+  font-size: 18px;
+  font-weight: lighter;
+  color: #000;
+  margin-bottom: 0%;
+
+}
+
 .content-section-a p a {
   color: rgb(29, 75, 167);
   font-weight: bold;
 }
+
 /*profile picture
 .img-circle {
   margin-top: 150px;
@@ -252,23 +261,23 @@ section {
 }
 
 /*       hover part          */
-.collapse ul li ul{
+.collapse ul li ul {
   opacity: 0;
   visibility: hidden;
   transform: scaley(0);
-  transform-origin:   top center;
+  transform-origin: top center;
 }
-.collapse ul li:hover ul{
+
+.collapse ul li:hover ul {
   opacity: 1;
   visibility: visible;
   transform: scaley(1);
-   
-}
-.collapse ul li ul li a:hover{
 
 }
 
- #below-section {
+.collapse ul li ul li a:hover {}
+
+#below-section {
   color: #000;
 }
 
@@ -288,6 +297,7 @@ section {
   margin: 0 0 15px;
   right: 0;
   border: 1px outset rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
 }
 
 #portfolio .portfolio-item:hover {
@@ -340,7 +350,7 @@ section {
 #portfolio .portfolio-item .portfolio-caption {
   max-width: 400px;
   margin: 0 auto;
-  background-color: rgba(0,0,0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   text-align: center;
   padding: 25px;
 }
@@ -380,79 +390,80 @@ section {
   display: inline-block;
   border: 1px outset rgba(255, 255, 255, 0.6);
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 1%;
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 2px 3px 2px rgba(0,0,0,0.3);
-  text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
+  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
+
 /*.col-md-4:hover {
   transition: 0.5s;
   box-shadow: 5px 10px 5px rgba(0,0,0,0.9);  
 }*/
 
 .section-heading-spacer {
-    float: left;
-    width: 200px;
-    border-top: 3px solid #e7e7e7;
+  float: left;
+  width: 200px;
+  border-top: 3px solid #e7e7e7;
 }
 
 /* Recuadro Paginas Asociadas*/
 .banner {
-    padding: -50px 0;
-    background: rgb(255, 255, 255);
-    background-size: cover;
-    height: 200px;
+  padding: -50px 0;
+  background: rgb(255, 255, 255);
+  background-size: cover;
+  height: 200px;
 }
 
 
 
 .banner ul {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .banner-social-buttons {
-    float: right;
-    margin-top: 0;
+  float: right;
+  margin-top: 0;
 }
 
 @media(max-width:1199px) {
-    ul.banner-social-buttons {
-        float: left;
-        margin-top: 15px;
-    }
+  ul.banner-social-buttons {
+    float: left;
+    margin-top: 15px;
+  }
 }
 
 
 
-    ul.banner-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-        
-    }
+ul.banner-social-buttons>li {
+  display: block;
+  margin-bottom: 20px;
+  padding: 0;
 
-    ul.banner-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
+}
+
+ul.banner-social-buttons>li:last-child {
+  margin-bottom: 0;
+}
 
 /* Color titulo Paginas asociadas */
 h2.connect {
-   margin: 0;
-   color: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 footer {
-    padding: 50px 0;
-    background:#406A5C;
-    
+  padding: 50px 0;
+  background: #406A5C;
+
 }
 
 p.copyright {
-    margin: 15px 0 0;
-    color:rgba(255, 255, 255, 0.9);
-    font-size: medium;
-    font-weight: lighter;
+  margin: 15px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: medium;
+  font-weight: lighter;
 }
 
 /* Dropdown Button */
@@ -476,7 +487,7 @@ p.copyright {
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -489,10 +500,98 @@ p.copyright {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  z-index: 100;
+  display: none;
+}
+
+.popup-content {
+  padding: 14px 10px;
+  line-height: 1.5;
+}
+
+.cnt223 a {
+  text-decoration: none;
+}
+
+.popup-onload {
+  margin: 0 auto;
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -300px;
+}
+
+.cnt223 {
+  min-width: 600px;
+  width: 600px;
+  min-height: 150px;
+  margin: 100px auto;
+  background: #f3f3f3;
+  position: relative;
+  z-index: 103;
+  padding: 15px 35px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #000;
+}
+
+.cnt223 p {
+  clear: both;
+  color: #555555;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.cnt223 p a {
+  color: #d91900;
+  font-weight: bold;
+}
+
+.cnt223 .x {
+  float: right;
+  height: 35px;
+  left: 22px;
+  position: relative;
+  top: -25px;
+  width: 34px;
+}
+
+.cnt223 .x:hover {
+  cursor: pointer;
+}
+
+.row {
+  height: 200px;
+  width: auto;
+}
+
+hr {
+  width: 50%;
+}
