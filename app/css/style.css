@@ -630,3 +630,35 @@ figcaption {
 }
 
 @media (min-width:1200px){.container{width:1500px}}
+
+.politica__description {
+  display: none;
+  color: #000000;
+  font-size: 16px;
+}
+
+.politica__description.active {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.politica__item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  width: 100%;
+  min-height: 2em;
+  padding-left: 0.5em;
+  font-size: 17px;
+  color: #363636;
+  font-weight: bold;
+  text-transform: uppercase;
+}
