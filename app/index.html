@@ -13,7 +13,19 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link rel='stylesheet'
         href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic'>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+   integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"
+   integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg=="
+   crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+
 </head>
 
 <body>
@@ -444,78 +456,32 @@
         </div>
         </div>
 
-        <!-- Portfolio Grid Section -->
+        <!-- Mapa seccion talleres consulta publica -->
         <hr>
+        <div id="mapid" style="width: 100%; height: 75vh;"></div>
 
-        <a name="portfolio"></a>
-        <section id="portfolio" class="bg-light-gray bounds">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">Fichas técnicas, mapas y contenido multimedia</h2></br>
-                        <!--<h3 id="below-section" class="section-subheading text-muted">Accede a más recursos</h3>-->
-                    </div>
-                    <!-- Portfolio img1 -->
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 portfolio-item">
-                            <a href="./seccion_fichas.html" target="_blank" class="portfolio-link" data-toggle="modal">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content">
-                                        <!--  <i class="fa fa-fire fa-3x"></i>-->
-                                    </div>
-                                </div>
-                                <img src="./multimedia/portada_ficha_tecnica.jpeg" class="img-responsive" alt="">
-                            </a>
-                            <div class="portfolio-caption">
-                                <h4>Fichas técnicas</h4>
-                                <p id="small-text" class="text-muted">Consultar información de cada UGA</p>
-                            </div>
-                        </div>
-                        <!-- End of Portfolio img1 -->
+        <script>
+            var myMap = L.map('mapid').setView([24.66305, -107.6229], 9);
 
-                        <!-- Portfolio img2 -->
-                        <div class="col-md-4 col-sm-6 portfolio-item portfolio2">
-                            <a href="./seccion_cartografia.html" class="portfolio-link" target="_blank"
-                                data-toggle="modal">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content">
+            L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data & copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+                id: 'light-v10'
+            }).addTo(myMap);
 
-                                    </div>
-                                </div>
-                                <img src="./multimedia/UGAS.jpg" class="img-responsive" alt="">
-                            </a>
-                            <div class="portfolio-caption">
-                                <h4>Cartografía</h4>
-                                <p id="small-text" class="text-muted">Ver y descargar mapas</p>
-                            </div>
-                        </div>
-                        <!-- End of Portfolio img2 -->
 
-                        <!-- Portfolio img3 -->
-                        <div class="col-md-4 col-sm-6 portfolio-item portfolio2">
-                            <a href="./seccion_multimedia.html" class="portfolio-link" target="_blank"
-                                data-toggle="modal">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content">
+            //Capas GeoJson
+ 
+            $.getJSON("./geojson/Regiones_Puebla.geojson",function(hoodData){
+            L.geoJson( hoodData , {
+            style: function(feature){
+                return { color: '#31a354', weight: 3, fillColor: "", fillOpacity: 0};
+            }
+        }  ).addTo(myMap);
+        });
+        </script>
 
-                                    </div>
-                                </div>
-                                <img src="./multimedia/portada_boton_multimedia.jpeg" class="img-responsive" alt="">
-                            </a>
-                            <div class="portfolio-caption">
-                                <h4>Multimedia</h4>
-                                <p id="small-text" class="text-muted">Ver contenido multimedia</p>
-                            </div>
-                        </div>
-                        <!-- End of Portfolio img3 -->
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <hr>
 
         <a name="contact"></a>
         <div class="banner">
