@@ -483,11 +483,33 @@
                         else fillColor = "#f7f7f7";  // no data
                         return { color: "#999", weight: 3, fillColor: fillColor, fillOpacity: .4 };
                     },
-                    onEachFeature: function( feature, layer ){
-                        layer.bindPopup( feature.properties.ZONA )
-                    }
-                } ).addTo(map);
+                    onEachFeature: onEachFeature
+                }).addTo(map);
             });
+
+            function highlightFeature(e) {
+                var layer = e.target;
+
+                layer.setStyle({
+                    weight: 5,
+                    color: '#666',
+                    dashArray: '',
+                    fillOpacity: 0.7
+                });
+
+                layer.bringToFront();
+            }
+
+            function resetHighlight(e) {
+                geojson.resetStyle(e.target);
+            }
+
+            function onEachFeature(feature, layer) {
+                layer.on({
+                    mouseover: highlightFeature,
+                    mouseout: resetHighlight,
+                });
+            }
         </script>
         
 
