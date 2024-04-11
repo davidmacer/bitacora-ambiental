@@ -471,50 +471,48 @@
                 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(map);
 
+            function fetchJSON(url) {
+                return fetch(url)
+                .then(function(response) {
+                    return response.json();
+                });
+            }
 
             // Agrega zonas de Puebla desde un archivo externo
-            $.getJSON("./geojson/regiones_puebla.geojson", function(hoodData){
-                L.geoJson( hoodData , {
+            var regiones_puebla= fetchJSON('./geojson/regiones_puebla.geojson')
+            .then(function(data) {
+                L.geoJson( data , {
                     style: function(feature){
                         var fillColor,
                         zona = feature.properties.ZONA;
-                        console.log(zona);
-                        if ( zona == "Zona 1" ) fillColor = "#006837";
-                        else if ( zona == "Zona 2" ) fillColor = "#31a354";
-                        else if ( zona == "Zona 3" ) fillColor = "#78c679";
-                        else if ( zona == "Zona 4" ) fillColor = "#c2e699";
-                        else if ( zona == "Zona 5" ) fillColor = "#ffffcc";
-                        else if ( zona == "Zona 6" ) fillColor = "#aaffcc";
+                        if ( zona == "Zona 1" ) fillColor = "#5ed360";
+                        else if ( zona == "Zona 2" ) fillColor = "#ffdd55";
+                        else if ( zona == "Zona 3" ) fillColor = "#c67138";
+                        else if ( zona == "Zona 4" ) fillColor = "#ff272a";
+                        else if ( zona == "Zona 5" ) fillColor = "#5e8dd3";
+                        else if ( zona == "Zona 6" ) fillColor = "#7535eb";
                         else fillColor = "#f7f7f7";  // no data
-                        return { color: "#999", weight: 3, fillColor: fillColor, fillOpacity: .4 };
+                        return { color: "#999", weight: 3, fillColor: fillColor, fillOpacity: .8 };
                     },
-                    onEachFeature: onEachFeature
+                    onEachFeature:districtdata,
                 }).addTo(map);
             });
 
-            function highlightFeature(e) {
-                var layer = e.target;
+            // Function to bind popup to the geoJason data.
+                function districtdata(feature, layer) {
+                    layer.bindPopup(feature.properties.ZONA)
 
-                layer.setStyle({
-                    weight: 5,
-                    color: '#666',
-                    dashArray: '',
-                    fillOpacity: 0.7
-                });
-
-                layer.bringToFront();
-            }
-
-            function resetHighlight(e) {
-                geojson.resetStyle(e.target);
-            }
-
-            function onEachFeature(feature, layer) {
-                layer.on({
-                    mouseover: highlightFeature,
-                    mouseout: resetHighlight,
-                });
-            }
+                    layer.on('mouseover', function (e) {
+                        e.target.setStyle({
+                            fillOpacity: 0.8
+                        });
+                    });
+                    layer.on('mouseout', function (e) {
+                        e.target.setStyle({
+                            fillOpacity: 0.55
+                        });
+                    });
+                };
         </script>
         
 
