@@ -513,7 +513,7 @@
                     });
                 });
                 layer.on('click', function onclick(e) {
-                    window.open("./seccion_consultapublica.html#foro_zona_2");
+                    window.open(e.target.feature.properties.url_foro);
                 });
             };
         </script>
