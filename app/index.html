@@ -492,27 +492,30 @@
                         else if ( zona == "Zona 5" ) fillColor = "#5e8dd3";
                         else if ( zona == "Zona 6" ) fillColor = "#7535eb";
                         else fillColor = "#f7f7f7";  // no data
-                        return { color: "#999", weight: 3, fillColor: fillColor, fillOpacity: .8 };
+                        return { color: "#999", weight: 3, fillColor: fillColor, fillOpacity: .3 };
                     },
-                    onEachFeature:districtdata,
+                    onEachFeature: onEachFeature,
                 }).addTo(map);
             });
 
             // Function to bind popup to the geoJason data.
-                function districtdata(feature, layer) {
-                    layer.bindPopup(feature.properties.ZONA)
-
-                    layer.on('mouseover', function (e) {
-                        e.target.setStyle({
-                            fillOpacity: 0.8
-                        });
+            function onEachFeature(feature, layer) {
+                layer.bindPopup(feature.properties.ZONA)
+                
+                layer.on('mouseover', function (e) {
+                    e.target.setStyle({
+                        fillOpacity: 1.0
                     });
-                    layer.on('mouseout', function (e) {
-                        e.target.setStyle({
-                            fillOpacity: 0.55
-                        });
+                });
+                layer.on('mouseout', function (e) {
+                    e.target.setStyle({
+                        fillOpacity: 0.3
                     });
-                };
+                });
+                layer.on('click', function onclick(e) {
+                    window.open("./seccion_consultapublica.html#foro_zona_2");
+                });
+            };
         </script>
         
 
