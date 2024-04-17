@@ -500,22 +500,48 @@
 
             // Function to bind popup to the geoJason data.
             function onEachFeature(feature, layer) {
-                layer.bindPopup(feature.properties.ZONA)
-                
                 layer.on('mouseover', function (e) {
                     e.target.setStyle({
                         fillOpacity: 1.0
                     });
+                    
+                    info.update(layer.feature.properties);
                 });
                 layer.on('mouseout', function (e) {
                     e.target.setStyle({
                         fillOpacity: 0.3
                     });
+                    info.update();
                 });
                 layer.on('click', function onclick(e) {
                     window.open(e.target.feature.properties.url_foro);
                 });
             };
+
+            var info = L.control();
+
+            info.onAdd = function (map) {
+                this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+                this.update();
+                return this._div;
+            };
+
+            // method that we will use to update the control based on feature properties passed
+            info.update = function (props) {
+                this._div.innerHTML = '<h3>Zonas socioeconómicas para la Consulta Pública</h3>' + (props ?
+                '<h4>' + props.ZONA + '<h4>' + 
+                    '<h5>Cantidad de UGA por categorías</h5>' +
+                    '<h6>' + 'Preservación: ' + props.PRES + '<br />' + '</h6>' + 
+                    '<h6>' + 'Conservación: ' + props.CONS + '<br />' + '</h6>' + 
+                    '<h6>' + 'Restauración: ' + props.RES + '<br />' + '</h6>' + 
+                    '<h6>' + 'Aprovechamiento Sustentable: ' + props.AP_SUS + '<br />' + '</h6>' + 
+                    '<h6>' + 'Áreas Naturales Protegidas: ' + props.ANP + '<br />' + '</h6>' + 
+                    '<h6>' + 'Centros de Población: ' + props.CENTRO + '<br />' + '</h6>' + 
+                    '<h6>' + 'POE SIORE: ' + props.POE_SIORE + '</h6>' + '<br />' + ' '
+                    : '<h6>Pasa el cursor sobre los polígonos del mapa</h6>  <h6>Da click sobre los polígonos para ir al contenido fotográfico</h6>');
+            };
+
+            info.addTo(map);
         </script>
         
 
