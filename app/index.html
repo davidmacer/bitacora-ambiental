@@ -460,7 +460,12 @@
                 <div class="col-lg-12 text-center">
                     <h1 class="section-heading">Zonas socioeconómicas de los foros de Consulta Pública</h1>
                 </div>
-                <div id="mapid" style="width: 100%; height: 75vh;"></div>
+                <p>El siguiente mapa presenta una perspectiva de las zonas socioeconómicas en que fue dividido el estado de Puebla para realizar el Programa de Ordenamiento Ecológico (POE). Los foros de la <a href="http://localhost:8080/multimedia/seccion_noticias/Convocatoria%20POE.Anteproyecto%20POEEP.pdf" target="_blank">Consulta Pública</a> se realizaron en cada una de estas zonas.</p>
+                <br />
+                <p>Al pasar el cursor sobre cada polígono se muestran las regiones socioeconómicas y la cantidad de unidades de gestión ambiental (UGA) que están comprendidas dentro de cada zona. Al hacer click sobre cada polígono en el mapa, se abrirá una nueva ventana donde se muestra la memoria fotográfica de los foros de Consulta Pública.</p>
+                <br />
+                
+                <div class="center" id="mapid" style="width: 100%; height: 75vh;"></div>
             </div>
         </div>
 
@@ -532,15 +537,15 @@
             // method that we will use to update the control based on feature properties passed
             info.update = function (props) {
                 this._div.innerHTML = '<h3>Zonas socioeconómicas de la Consulta Pública</h3>' + (props ?
-                '<h4>' + props.ZONA + '<h4>' + 
-                    '<h5>Cantidad de UGA por categorías</h5>' +
-                    '<h6>' + 'Preservación: ' + props.PRES + '<br />' + '</h6>' + 
-                    '<h6>' + 'Conservación: ' + props.CONS + '<br />' + '</h6>' + 
-                    '<h6>' + 'Restauración: ' + props.RES + '<br />' + '</h6>' + 
-                    '<h6>' + 'Aprovechamiento Sustentable: ' + props.AP_SUS + '<br />' + '</h6>' + 
-                    '<h6>' + 'Áreas Naturales Protegidas: ' + props.ANP + '<br />' + '</h6>' + 
-                    '<h6>' + 'Centros de Población: ' + props.CENTRO + '<br />' + '</h6>' + 
-                    '<h6>' + 'POE SIORE: ' + props.POE_SIORE + '</h6>' + '<br />' + ' '
+                '<h4>' + '<b>' + props.ZONA +  ': ' + '</b>' + props.REGIONES + '<h4>' + 
+                    '<h4>Cantidad de UGA por categorías:</h4>' +
+                    '<h5>' + 'Preservación: ' + props.PRES + '<br />' + '</h5>' + 
+                    '<h5>' + 'Conservación: ' + props.CONS + '<br />' + '</h5>' + 
+                    '<h5>' + 'Restauración: ' + props.RES + '<br />' + '</h5>' + 
+                    '<h5>' + 'Aprovechamiento Sustentable: ' + props.AP_SUS + '<br />' + '</h5>' + 
+                    '<h5>' + 'Áreas Naturales Protegidas: ' + props.ANP + '<br />' + '</h5>' + 
+                    '<h5>' + 'Centros de Población: ' + props.CENTRO + '<br />' + '</h5>' + 
+                    '<h5>' + 'POE SIORE: ' + props.POE_SIORE + '</h5>' + '<br />' + ' '
                     : '<h5>Pasa el cursor sobre los polígonos del mapa para concer la información de cada zona <br/> y da click en cada polígono para ver la memoria fotográfica de los foros de Consulta Pública.</h5>');
             };
 
