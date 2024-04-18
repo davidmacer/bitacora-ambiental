@@ -32,13 +32,13 @@ p {
 .topnav {
   font-size: 15px;
   /*border-bottom: 0.5px outset rgb(255, 255, 255);*/
-  background: #406A5C;
-  box-shadow: 0px 0px #406A5C;
+  background: #f6f4f0;
+  box-shadow: 0px 0px #f6f4f0;
 }
 
 /* barra superior lado derecho */
 .topnav ul.navbar-nav li a {
-  background: #406A5C;
+  background: #f6f4f0;
   color: #ffffff;
   height: 73px;
 }
@@ -46,7 +46,7 @@ p {
 /* color de fondo de botones (hover) barra superior lado derecho */
 .topnav ul.navbar-nav li a:hover,
 .topnav ul.navbar-nav li a:focus {
-  background: #406A5C;
+  background: #f6f4f0;
   color: #000;
 }
 
@@ -62,7 +62,7 @@ p {
 /* color de fondo de botones (hover) barra superior lado izquierdo */
 .topnav .navbar-brand:hover,
 .topnav .navbar-brand:focus {
-  background: #406A5C;
+  background: #f6f4f0;
   color: #000;
 }
 
@@ -458,7 +458,7 @@ h2.connect {
 
 footer {
   padding: 50px 0;
-  background: #406A5C;
+  background: #f6f4f0;
 
 }
 
