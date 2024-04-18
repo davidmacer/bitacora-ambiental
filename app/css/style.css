@@ -82,6 +82,13 @@ p {
   width: 130px;
 }
 
+.logo_monocromatico {
+  position: absolute;
+  height: auto;
+  left: 100px;
+  width: 130px;
+}
+
 .lead {
   font-size: 18px;
   font-weight: 400;
