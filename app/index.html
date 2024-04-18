@@ -454,66 +454,7 @@
 
         <!-- Mapa seccion talleres consulta publica -->
         <hr>
-        <div id="mapid" style="width: 50%; height: 75vh;"></div>
-
-        <script>
-            // Inicializa el mapa
-            var map = L.map('mapid').setView([19.3, -97.90094], 8);
-
-            // Agrega el mapa base
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 17,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            }).addTo(map);
-
-
-            // Agrega zonas de Puebla desde un archivo externo
-            $.getJSON("./geojson/regiones_puebla.geojson", function(hoodData){
-                L.geoJson( hoodData , {
-                    style: function(feature){
-                        var fillColor,
-                        zona = feature.properties.ZONA;
-                        console.log(zona);
-                        if ( zona == "Zona 1" ) fillColor = "#006837";
-                        else if ( zona == "Zona 2" ) fillColor = "#31a354";
-                        else if ( zona == "Zona 3" ) fillColor = "#78c679";
-                        else if ( zona == "Zona 4" ) fillColor = "#c2e699";
-                        else if ( zona == "Zona 5" ) fillColor = "#ffffcc";
-                        else if ( zona == "Zona 6" ) fillColor = "#aaffcc";
-                        else fillColor = "#f7f7f7";  // no data
-                        return { color: "#999", weight: 3, fillColor: fillColor, fillOpacity: .4 };
-                    },
-                    onEachFeature: onEachFeature
-                }).addTo(map);
-            });
-
-            function highlightFeature(e) {
-                var layer = e.target;
-
-                layer.setStyle({
-                    weight: 5,
-                    color: '#666',
-                    dashArray: '',
-                    fillOpacity: 0.7
-                });
-
-                layer.bringToFront();
-            }
-
-            function resetHighlight(e) {
-                geojson.resetStyle(e.target);
-            }
-
-            function onEachFeature(feature, layer) {
-                layer.on({
-                    mouseover: highlightFeature,
-                    mouseout: resetHighlight,
-                });
-            }
-        </script>
         
-
-
         <a name="contact"></a>
         <div class="banner">
             <div class="bg-overlay4">
