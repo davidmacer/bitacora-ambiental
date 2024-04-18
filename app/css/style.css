@@ -85,8 +85,8 @@ p {
 .logo_monocromatico {
   position: absolute;
   height: auto;
-  left: 100px;
-  width: 130px;
+  left: 0px;
+  width: 800px;
 }
 
 .lead {
