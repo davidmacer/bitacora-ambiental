@@ -6,8 +6,8 @@ html {
 }
 
 @font-face {
-  font-family: 'adelle-sans-light';
-  src: url('../js/adelle-sans-light-maisfontes.74a5/adelle-sans-light.otf') format('opentype');
+  font-family: 'Poppins', sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
   font-weight: normal;
   font-style: normal;
 }
@@ -20,7 +20,7 @@ h4,
 h5,
 h6,
 p {
-  font-family: "adelle-sans-light";
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
 }
 
@@ -370,7 +370,7 @@ section {
 }
 
 #portfolio .portfolio-item .portfolio-caption p {
-  font-family: "adelle-sans-light", sans-serif;
+  font-family: 'poppins-bold', sans-serif !important;
   font-style: italic;
   font-size: 18px;
   margin: 0;
@@ -576,7 +576,7 @@ p.copyright {
   clear: both;
   color: #555555;
   font-size: 20px;
-  font-family: sans-serif;
+  font-family: 'poppins-bold', sans-serif !important;
 }
 
 .cnt223 p a {
