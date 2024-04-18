@@ -166,7 +166,7 @@
                                     <li>
                                         <div class="dropdown">
                                             <button class="btn btn-default btn-lg"><span
-                                                    class="network-name">UGAs</span></button>
+                                                    class="network-name">UGA</span></button>
                                             <div class="dropdown-content">
                                                 <a href="./seccion_cartografia.html" target="_blank">Cartografía </br>
                                                     (en proceso)</a>
@@ -454,7 +454,106 @@
 
         <!-- Mapa seccion talleres consulta publica -->
         <hr>
+
+        <div class="content-section-a">
+            <div class="container">
+                <div class="col-lg-12 text-center">
+                    <h1 class="section-heading">Zonas socioeconómicas de los foros de Consulta Pública</h1>
+                </div>
+                <p>El siguiente mapa presenta una perspectiva de las zonas socioeconómicas en que fue dividido el estado de Puebla para realizar el Programa de Ordenamiento Ecológico (POE). Los foros de la <a href="http://localhost:8080/multimedia/seccion_noticias/Convocatoria%20POE.Anteproyecto%20POEEP.pdf" target="_blank">Consulta Pública</a> se realizaron en cada una de estas zonas.</p>
+                <br />
+                <p>Al pasar el cursor sobre cada polígono se muestran las regiones socioeconómicas y la cantidad de unidades de gestión ambiental (UGA) que están comprendidas dentro de cada zona. Al hacer click sobre cada polígono en el mapa, se abrirá una nueva ventana donde se muestra la memoria fotográfica de los foros de Consulta Pública.</p>
+                <br />
+                
+                <div class="center" id="mapid" style="width: 100%; height: 75vh;"></div>
+            </div>
+        </div>
+
+        <script>
+            // Inicializa el mapa
+            var map = L.map('mapid').setView([19.3, -97.90094], 8);
+
+            // Agrega el mapa base
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 17,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            function fetchJSON(url) {
+                return fetch(url)
+                .then(function(response) {
+                    return response.json();
+                });
+            }
+
+            // Agrega zonas de Puebla desde un archivo externo
+            var regiones_puebla= fetchJSON('./geojson/regiones_puebla.geojson')
+            .then(function(data) {
+                L.geoJson( data , {
+                    style: function(feature){
+                        var fillColor,
+                        zona = feature.properties.ZONA;
+                        if ( zona == "Zona 1" ) fillColor = "#5ed360";
+                        else if ( zona == "Zona 2" ) fillColor = "#ffdd55";
+                        else if ( zona == "Zona 3" ) fillColor = "#c67138";
+                        else if ( zona == "Zona 4" ) fillColor = "#ff272a";
+                        else if ( zona == "Zona 5" ) fillColor = "#5e8dd3";
+                        else if ( zona == "Zona 6" ) fillColor = "#7535eb";
+                        else fillColor = "#f7f7f7";  // no data
+                        return { color: "#999", weight: 3, fillColor: fillColor, fillOpacity: .3 };
+                    },
+                    onEachFeature: onEachFeature,
+                }).addTo(map);
+            });
+
+            // Function to bind popup to the geoJason data.
+            function onEachFeature(feature, layer) {
+                layer.on('mouseover', function (e) {
+                    e.target.setStyle({
+                        fillOpacity: 1.0
+                    });
+                    
+                    info.update(layer.feature.properties);
+                });
+                layer.on('mouseout', function (e) {
+                    e.target.setStyle({
+                        fillOpacity: 0.3
+                    });
+                    info.update();
+                });
+                layer.on('click', function onclick(e) {
+                    window.open(e.target.feature.properties.url_foro);
+                });
+            };
+
+            var info = L.control();
+
+            info.onAdd = function (map) {
+                this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+                this.update();
+                return this._div;
+            };
+
+            // method that we will use to update the control based on feature properties passed
+            info.update = function (props) {
+                this._div.innerHTML = '<h3>Zonas socioeconómicas de la Consulta Pública</h3>' + (props ?
+                '<h4>' + '<b>' + props.ZONA +  ': ' + '</b>' + props.REGIONES + '<h4>' + 
+                    '<h4>Cantidad de UGA por categorías:</h4>' +
+                    '<h5>' + 'Preservación: ' + props.PRES + '<br />' + '</h5>' + 
+                    '<h5>' + 'Conservación: ' + props.CONS + '<br />' + '</h5>' + 
+                    '<h5>' + 'Restauración: ' + props.RES + '<br />' + '</h5>' + 
+                    '<h5>' + 'Aprovechamiento Sustentable: ' + props.AP_SUS + '<br />' + '</h5>' + 
+                    '<h5>' + 'Áreas Naturales Protegidas: ' + props.ANP + '<br />' + '</h5>' + 
+                    '<h5>' + 'Centros de Población: ' + props.CENTRO + '<br />' + '</h5>' + 
+                    '<h5>' + 'POE SIORE: ' + props.POE_SIORE + '</h5>' + '<br />' + ' '
+                    : '<h5>Pasa el cursor sobre los polígonos del mapa para concer la información de cada zona <br/> y da click en cada polígono para ver la memoria fotográfica de los foros de Consulta Pública.</h5>');
+            };
+
+            info.addTo(map);
+        </script>
         
+        <hr>
+
         <a name="contact"></a>
         <div class="banner">
             <div class="bg-overlay4">
