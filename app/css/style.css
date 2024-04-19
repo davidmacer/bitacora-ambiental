@@ -39,7 +39,7 @@ p {
 /* barra superior lado derecho */
 .topnav ul.navbar-nav li a {
   background: #f6f4f0;
-  color: #000;
+  color: #5c5c5c;
   height: 73px;
 }
 
@@ -47,7 +47,7 @@ p {
 .topnav ul.navbar-nav li a:hover,
 .topnav ul.navbar-nav li a:focus {
   background: #f6f4f0;
-  color: #000;
+  color: #5c5c5c;
 }
 
 
@@ -55,7 +55,7 @@ p {
 /* Fondo y letra de la barra de navegación superior */
 .topnav .navbar-brand {
   background: rgba(28, 28, 28, 0.0);
-  color: #000;
+  color: #5c5c5c;
 
 }
 
@@ -85,8 +85,8 @@ p {
 .logo_monocromatico {
   position: absolute;
   height: auto;
-  left: 0px;
-  width: 800px;
+  left: 60px;
+  width: 200px;
 }
 
 .lead {
