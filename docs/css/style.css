@@ -1,0 +1,707 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+
+}
+
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-size: 18;
+}
+
+/* barra superior lado izquierdo */
+.topnav {
+  font-size: 15px;
+  /*border-bottom: 0.5px outset rgb(255, 255, 255);*/
+  background: #f6f4f0;
+  box-shadow: 0px 0px #f6f4f0;
+}
+
+/* barra superior lado derecho */
+.topnav ul.navbar-nav li a {
+  background: #f6f4f0;
+  color: #5c5c5c;
+  height: 73px;
+}
+
+/* color de fondo de botones (hover) barra superior lado derecho */
+.topnav ul.navbar-nav li a:hover,
+.topnav ul.navbar-nav li a:focus {
+  background: #f6f4f0;
+  color: #5c5c5c;
+}
+
+
+
+/* Fondo y letra de la barra de navegación superior */
+.topnav .navbar-brand {
+  background: rgba(28, 28, 28, 0.0);
+  color: #5c5c5c;
+
+}
+
+/* color de fondo de botones (hover) barra superior lado izquierdo */
+.topnav .navbar-brand:hover,
+.topnav .navbar-brand:focus {
+  background: #f6f4f0;
+  color: #000;
+}
+
+/* logopuebla en barra superior */
+.logopuebla {
+  position: absolute;
+  height: auto;
+  left: 0px;
+  width: 130px;
+}
+
+/* logosmadsot en barra superior */
+.logoSMADSOT {
+  position: fixed;
+  height: auto;
+  left: 130px;
+  width: 130px;
+}
+
+.logo_monocromatico {
+  position: absolute;
+  height: auto;
+  left: 60px;
+  width: 200px;
+}
+
+.lead {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/*top background*/
+.intro-header {
+  padding-top: 50px;
+  /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+  padding-bottom: 50px;
+  text-align: center;
+  background: url('../multimedia/portada_bitacora.png') no-repeat center center fixed;
+  background-size: cover;
+  height: 855px;
+}
+
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  height: 855px;
+}
+
+/*Seccion Bitacora ambiental mas botones*/
+.intro-message {
+  position: relative;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+/*Big header*/
+.intro-message>h1 {
+  margin-top: -50px;
+  text-shadow: 2px 1px 2px #000;
+  font-size: 5em;
+  color: rgb(255, 255, 255);
+}
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/*small header*/
+.intro-message>h3 {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  color: rgb(255, 255, 255);
+}
+
+@media(max-width:767px) {
+  .intro-message {
+    padding-bottom: 15%;
+  }
+
+  .intro-message>h1 {
+    font-size: 3em;
+  }
+
+  ul.intro-social-buttons>li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  ul.intro-social-buttons>li:last-child {
+    margin-bottom: 0;
+  }
+
+  .intro-divider {
+    width: 100%;
+  }
+}
+
+/*line*/
+hr.intro-divider {
+  border: 1px outset rgba(255, 255, 255, 0.2);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
+
+/* social buttons */
+.btn {
+  display: inline-block;
+  color: #000;
+  border: 2px outset rgba(0, 0, 0, 0.9);
+  background: #C0C0C0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 20);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  color: #fff;
+  border: 2px outset rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+  transition: 0.2s;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 20);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+/*Seccion Que es OE y Que es bitacora ambiental*/
+.content-section-a {
+  padding: 50px 50;
+  background: white;
+  background-size: cover;
+  /*margin: 50px 25px;*/
+}
+
+.bg-overlay2 {
+  margin-top: -50px;
+  background: rgba(255, 255, 255, 0.2);
+  height: 855px;
+}
+
+/*self-taught*/
+.container .link {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 22px;
+}
+
+
+.container .link-footer {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.container .link-footer:hover {
+  color: rgba(24, 39, 40, 0.8);
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.container .link:hover {
+  color: rgb(0, 0, 128);
+  font-weight: bold;
+  font-size: 22.5px;
+}
+
+/*Titulo Que es OE*/
+.content-section-a p h2.section-heading {
+  margin-top: 20px;
+  font-size: 3em;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/*texto parrafo Que es Ordenamiento Ecologico y Que es bitacora ambiental*/
+.content-section-a p {
+  font-size: 18px;
+  font-weight: lighter;
+  color: #000;
+  margin-bottom: 0%;
+
+}
+
+.content-section-a p a {
+  color: rgb(29, 75, 167);
+  font-weight: bold;
+}
+
+/*profile picture
+.img-circle {
+  margin-top: 150px;
+  border: 1px outset rgba(193, 127, 127, 0.3);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+  
+}*/
+
+
+/* seccion consulta mas informacion*/
+section {
+  color: black;
+  background: white;
+  background-size: cover;
+}
+
+/*       hover part          */
+.collapse ul li ul {
+  opacity: 0;
+  visibility: hidden;
+  transform: scaley(0);
+  transform-origin: top center;
+}
+
+.collapse ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+  transform: scaley(1);
+
+}
+
+.collapse ul li ul li a:hover {}
+
+#below-section {
+  color: #000;
+}
+
+#small-text {
+  color: white;
+}
+
+/*.portfolio-item {
+  overflow: hidden;
+  padding: 7px;
+  color: white;
+  height: 308px;
+}*/
+/*Portfolio items*/
+
+#portfolio .portfolio-item {
+  margin: 0 0 15px;
+  right: 0;
+  border: 1px outset rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+}
+
+#portfolio .portfolio-item:hover {
+  transition: 0.5s;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.9);
+}
+
+#portfolio .portfolio-item .portfolio-link {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  background: rgba(0, 0, 0, .7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all ease .5s;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s,
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+  opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+  color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+  margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+  margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 25px;
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 {
+  color: #fff;
+  text-transform: none;
+  margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+  font-family: 'poppins-bold', sans-serif !important;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0;
+}
+
+#portfolio * {
+  z-index: 2;
+}
+
+@media (min-width:767px) {
+  #portfolio .portfolio-item {
+    margin: 0 0 30px;
+  }
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.col-md-4 {
+  overflow: hidden;
+  display: inline-block;
+  border: 1px outset rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin: 0 30px;
+  width: 400px;
+}
+
+.col-md-4:hover {
+  transition: 0.5s;
+  box-shadow: 5px 10px 5px rgba(0,0,0,0.9);  
+}
+
+.section-heading-spacer {
+  float: left;
+  width: 200px;
+  border-top: 3px solid #e7e7e7;
+}
+
+/* Recuadro Paginas Asociadas*/
+.banner {
+  padding: -50px 0;
+  background: rgb(255, 255, 255);
+  background-size: cover;
+  height: 200px;
+}
+
+
+
+.banner ul {
+  margin-bottom: 0;
+}
+
+.banner-social-buttons {
+  float: right;
+  margin-top: 0;
+}
+
+@media(max-width:1199px) {
+  ul.banner-social-buttons {
+    float: left;
+    margin-top: 15px;
+  }
+}
+
+
+
+ul.banner-social-buttons>li {
+  display: block;
+  margin-bottom: 20px;
+  padding: 0;
+
+}
+
+ul.banner-social-buttons>li:last-child {
+  margin-bottom: 0;
+}
+
+/* Color titulo Paginas asociadas */
+h2.connect {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+footer {
+  padding: 50px 0;
+  background: #f6f4f0;
+
+}
+
+p.copyright {
+  margin: 15px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: medium;
+  font-weight: lighter;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7;
+  z-index: 100;
+  display: none;
+}
+
+.popup-content {
+  padding: 14px 10px;
+  line-height: 1.5;
+}
+
+.cnt223 a {
+  text-decoration: none;
+}
+
+.popup-onload {
+  margin: 0 auto;
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -300px;
+}
+
+.cnt223 {
+  min-width: 600px;
+  width: 600px;
+  min-height: 150px;
+  margin: 100px auto;
+  background: #f3f3f3;
+  position: relative;
+  z-index: 103;
+  padding: 15px 35px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #000;
+}
+
+.cnt223 p {
+  clear: both;
+  color: #555555;
+  font-size: 20px;
+  font-family: 'poppins-bold', sans-serif !important;
+}
+
+.cnt223 p a {
+  color: #d91900;
+  font-weight: bold;
+}
+
+.cnt223 .x {
+  float: right;
+  height: 35px;
+  left: 22px;
+  position: relative;
+  top: -25px;
+  width: 34px;
+}
+
+.cnt223 .x:hover {
+  cursor: pointer;
+}
+
+.row {
+  height: 200px;
+  width: auto;
+}
+
+hr {
+  width: 50%;
+}
+
+figcaption {
+  padding-top: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 3px solid #000;
+}
+
+.gallery::after {
+  content: "";
+  width: 350px;
+}
+
+@media (min-width:1200px){.container{width:1500px}}
+
+.politica__description {
+  display: none;
+  color: #000000;
+  font-size: 16px;
+}
+
+.politica__description.active {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.politica__item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  width: 100%;
+  min-height: 2em;
+  padding-left: 0.5em;
+  font-size: 17px;
+  color: #363636;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Leaflet Map */
+#mapid { height: 180px; }
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+  }
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.info h5 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+table {
+  width:100%;
+  text-align: center;
+}
+
+th {
+  font-size: 16px;
+}
+table, th, td {
+  border:1px solid black;
+  text-align: center;
+}
