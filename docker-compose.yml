@@ -5,6 +5,6 @@ services:
     container_name: cont-bitacora
     restart: always
     volumes:
-      - ./app/:/usr/share/nginx/html/
+      - ./docs/:/usr/share/nginx/html/
     ports:
       - "8080:80"
