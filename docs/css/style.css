@@ -39,7 +39,7 @@ p {
 /* barra superior lado derecho */
 .topnav ul.navbar-nav li a {
   background: #406A5C;
-  color: #5c5c5c;
+  color: #000;
   height: 73px;
 }
 
@@ -47,7 +47,7 @@ p {
 .topnav ul.navbar-nav li a:hover,
 .topnav ul.navbar-nav li a:focus {
   background: #406A5C;
-  color: #5c5c5c;
+  color: #FFF;
 }
 
 
