@@ -55,7 +55,7 @@ p {
 /* Fondo y letra de la barra de navegación superior */
 .topnav .navbar-brand {
   background: rgba(28, 28, 28, 0.0);
-  color: #5c5c5c;
+  color: #000;
 
 }
 
